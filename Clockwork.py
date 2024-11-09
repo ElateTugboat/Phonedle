@@ -18,6 +18,3 @@ class Clockwork:
         Contact = {name:phonNum}
 
 
-
-#.....NOW WHAT...?! O_O
-
