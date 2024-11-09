@@ -18,7 +18,7 @@ class Clockwork:
         Contact = {name:phonNum}
         return Contact
 
-    def LadiesDoIHazThisRight(Contact, Digi): #Reference: The Price is Right game where contestants guessed car prices.
+    def LadiesDoIHazThisRight(Contact, Digi): #Reference: The Price is Right game "One Away" where contestants guessed car prices.
         for nums in Contact.getKey():
             CheckDigi= Contact.getKey(nums)
             if Digi == CheckDigi[nums]:
