@@ -20,6 +20,11 @@ while running:
 
     bg_color = (18, 18, 76)
     screen.fill(bg_color)
+
+    
+    image = pygame.image.load("boaay/Kream.png").convert()
+    
+    screen.blit(image,(10,10))
     
     screen.blit(title_surface, ((screen_width - text_width) / 2, (screen_height - text_height) / 2 - 250))
     
