@@ -13,7 +13,8 @@ while running:
             running = False
 
     # fill the screen with a color to wipe away anything from last frame
-    screen.fill("purple")
+    bg_color = (18, 18, 76)
+    screen.fill(bg_color)
 
     # RENDER YOUR GAME HERE
 
