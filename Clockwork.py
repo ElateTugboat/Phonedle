@@ -6,7 +6,8 @@
 #Purpose: Logic Control System for Phonedle (SCC Hacks 2024)                *
 #Inputs: Numerical Outputs from MountainDreamin's Dictionary Log Programming*
 #****************************************************************************
-class Clockwork: 
+class Clockwork():
+    contact1 = {"name":"Bill Johnson", "number":8005882300}
 
 #Create a Dictionary to hold values of
     def __init__(self, name, phonNum):
@@ -15,6 +16,5 @@ class Clockwork:
 
 #Build the dictionary of the phone number and names
     def BuildNum (name, phonNum):
-        Contact = {name:phonNum}
-
-
+        Contact = name
+        number = phonNum
