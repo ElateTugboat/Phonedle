@@ -16,6 +16,6 @@ class Clockwork:
 #Build the dictionary of the phone number and names
     def BuildNum (name, phonNum):
         Contact = {phonNum:name}
-
+# "Check if the key is of integer datatype. Next, during iteration, type cast it into a string then index it and check the "
         for num i Contract 
 
