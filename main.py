@@ -1,5 +1,6 @@
 import pygame
 from Clockwork import *
+from boaay import *
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
@@ -40,24 +41,6 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_BACKSPACE:  # Handle backspace
-                phone_number = phone_number[:-1]
-            elif event.key == pygame.K_RETURN:  # Handle enter key, stop input (optional)
-                pass
-            else:
-                # Allow digits and specific symbols like '(', ')', '-', and space
-                if len(phone_number) < max_len and event.unicode in '0123456789':
-                    phone_number += event.unicode
-    
-    pygame.draw.rect(screen, (255, 255, 255), input_box, 2)
-    
-    txt_surface = render_text(phone_number, pb_font, WHITE)
-    screen.blit(txt_surface, (input_box.x + 10, input_box.y + 10))
-
-
-
-
 
     bg_color = (18, 18, 76)
     screen.fill(bg_color)
@@ -65,6 +48,8 @@ while running:
     screen.blit(title_surface, ((screen_width - title_width) / 2, (screen_height - title_height) / 2 - 250))
     screen.blit(objective_text_surface, ((screen_width - objective_text_width) / 2, (screen_height - objective_text_height) / 2 - 105))
     screen.blit(name_surface, ((screen_width - name_width) / 2, (screen_height - name_height) / 2 - 65))
+    
+    BoaayFunc(screen)
     
     pygame.display.flip()
 
