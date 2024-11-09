@@ -52,8 +52,8 @@ while running:
                 user_text = user_text[:-1] 
             
             elif event.key == pygame.K_RETURN:
-                if user_text == Clockwork.contact1["number"]:
-                    user_text = ""
+                if user_text == Clockwork.contact1['number']:
+                    ans_check = True
                     bg_color = (0, 204, 102)
                 
 
@@ -73,14 +73,14 @@ while running:
     BoaayFunc(screen)
     pygame.draw.rect(screen, ORANGE, input_rect)
   
-    text_surface = pb_font.render(user_text, True, (255, 255, 255))
+    text_surface = pb_font.render(user_text, True, (61, 63, 120))
       
     # render at position stated in arguments 
     screen.blit(text_surface, (input_rect.x+5, input_rect.y+5)) 
       
     # set width of textfield so that text cannot get 
     # outside of user's text input 
-    input_rect.w = max(100, text_surface.get_width()+10) 
+    input_rect.w = max(100, text_surface.get_width()+10)
     
     pygame.display.flip()
 

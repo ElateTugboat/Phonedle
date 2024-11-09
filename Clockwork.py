@@ -7,7 +7,7 @@
 #Inputs: Numerical Outputs from MountainDreamin's Dictionary Log Programming*
 #****************************************************************************
 class Clockwork:
-    contact1 = {"name":"Bill Johnson", "number":8005882300}
+    contact1 = {"name":"Bill Johnson", "number":"8005882300"}
 
 #Create a Dictionary to hold values of
     def __init__(self, name, phonNum):
