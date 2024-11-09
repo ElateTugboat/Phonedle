@@ -25,5 +25,24 @@ class Clockwork:
                 print ("Digit is present in this number")
             #WHERE IS IT?! -BaleBat
                 print ("Digit is present here", CheckDigi[nums])
-           
+    #Matt's Part:
+    def boolPositions(contact, inputNum):
+        userInput = str(inputNum)
+        bools = list([])
+        value = str(contact.value)
+        var = 0
+        while(var < len(userInput)):
+            bools.append(userInput[var] == value[var])
+            var += 1
+        return bools
+
+    def boolPositions(dict, name, inputNum):
+        userInput = str(inputNum)
+        bools = list([])
+        value = str(dict[name])
+        var = 0
+        while(var < len(userInput)):
+            bools.append(userInput[var] == value[var])
+            var += 1
+        return bools       
 
