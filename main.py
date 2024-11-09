@@ -1,4 +1,6 @@
 import pygame
+from Clockwork import *
+from boaay import *
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
