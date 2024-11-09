@@ -27,14 +27,16 @@ wrong_box = pygame.image.load("art/wrong.png").convert()
 
 # Shapes
 input_box = pygame.Rect(100, 150, 400, 50)
-input_rect = pygame.Rect(200, 200, 140, 32) 
+
 
 screen_width, screen_height = screen.get_size()
 title_width, title_height = title_surface.get_size()
 objective_text_width, objective_text_height = objective_text_surface.get_size()
 name_width, name_height = name_surface.get_size()
+input_rect = pygame.Rect((screen_width - objective_text_width) / 2, (screen_height - objective_text_height) / 2 + 30, 140, 32) 
 
 while running:
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -66,7 +68,8 @@ while running:
     screen.blit(objective_text_surface, ((screen_width - objective_text_width) / 2, (screen_height - objective_text_height) / 2 - 105))
     screen.blit(name_surface, ((screen_width - name_width) / 2, (screen_height - name_height) / 2 - 65))
     
-    pygame.draw.rect(screen, ORANGE, input_rect) 
+    BoaayFunc(screen)
+    pygame.draw.rect(screen, ORANGE, input_rect)
   
     text_surface = pb_font.render(user_text, True, (255, 255, 255))
       
