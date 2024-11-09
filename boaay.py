@@ -3,20 +3,19 @@ import pygame
 def BoaayFunc(screen):
     
     numpad = pygame.image.load("art/numpad.png").convert()
-    
 
     numpad = pygame.transform.scale(numpad, (200, 200))
 
     screen.blit(numpad, ((550,450)))
 
-    DrawBoxLine([100,350], 10, 100, screen)
+    DrawBoxLine([220,350], 10, 70, screen)
 
 
 def DrawBoxLine(pos, lenth, step, screen):
 
     i = 0
     
-    scale_both = 80
+    scale_both = 70
 
     scale = (scale_both, scale_both)
 
