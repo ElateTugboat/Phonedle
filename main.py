@@ -55,6 +55,8 @@ while running:
                 if user_text == Clockwork.contact1['number']:
                     ans_check = True
                     bg_color = (0, 204, 102)
+                else:
+                    user_text = ""
                 
 
             # Unicode standard is used for string 
