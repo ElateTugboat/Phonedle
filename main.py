@@ -52,6 +52,9 @@ name_width, name_height = name_surface.get_size()
 input_rect = pygame.Rect((screen_width - objective_text_width) / 2,
                          (screen_height - objective_text_height) / 2 + 30, 140, 32)
 
+numkey = pygame.image.load("art/kindof.png").convert()
+numkey_rect = numkey.get_rect()
+
 while running:
 
     for event in pygame.event.get():
@@ -77,6 +80,16 @@ while running:
             # formation
             else:
                 user_text += event.unicode
+    
+    def numkey_click(num_pressed):
+        global user_text
+        user_text += str(num_pressed)
+    
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        if event.button == 1:
+            mouse_pos = event.pos
+            if numkey_rect.collidepoint(mouse_pos):
+                numkey_click(1)
 
     if ans_check == False:
         bg_color = (18, 18, 76)
@@ -88,6 +101,8 @@ while running:
                 2, (screen_height - objective_text_height) / 2 - 105))
     screen.blit(name_surface, ((screen_width - name_width) /
                 2, (screen_height - name_height) / 2 - 65))
+    screen.blit(numkey, (450, 500))
+    numkey_rect.topleft = 450, 500
 
     BoaayFunc(screen)
     pygame.draw.rect(screen, "ORANGE", input_rect)
